@@ -1,0 +1,14 @@
+(defvar *on* nil)
+ 
+(contain
+ (make-instance 'menu
+                :items
+                (list 
+                 (make-instance 
+                 'menu-item
+                 :title "Foo"
+                 :enabled-function 
+                 #'(lambda (menu) *on*))
+                (make-instance 
+                 'menu-item
+                 :title "Bar"))))
