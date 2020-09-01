@@ -1,0 +1,11 @@
+(setq test (make-instance 'menu-item
+                            :title "Test"
+                            :callback 'test-callback))
+                            
+(setq hello (make-instance 'menu-item
+                            :title "Hello"
+                            :callback 'hello))
+                            
+(setq group (make-instance 'menu-component
+                            :items (list test hello)))
+(contain group)
