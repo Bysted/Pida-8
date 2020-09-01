@@ -1,8 +1,12 @@
-(setq letters (make-instance 'menu-component
-                  :interaction :multiple-selection
-                  :items (list "Alpha" "Beta")))
-                  
-(contain (make-instance 'menu
-                  :title "Greek"
-                  :items (list letters)
-                  :callback 'test-callback))
+(setq radio (make-instance 'menu-component 
+                :interaction :single-selection 
+                :items '("This" "That")
+                :callback 'hello))
+
+(setq commands (make-instance 'menu 
+                :title "Commands" 
+                :items 
+                 (list "Command 1" radio "Command 2")
+                :callback 'test-callback))
+
+(contain commands)
