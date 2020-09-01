@@ -1,7 +1,15 @@
+(setq file-images (list :std-file-new
+:std-file-open
+:std-file-save))
+
 (defun test-callback (data interface)
   (display-message "Data ~S in interface ~S" 
                    data interface))
-                   
+
+(defun print-callback (data interface)
+(declare (ignore data interface))
+(display-message "Print Something"))
+
 (defun hello (data interface)
   (declare (ignore data interface)) 
   (display-message "Hello World"))
