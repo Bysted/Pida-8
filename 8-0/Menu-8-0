@@ -1,0 +1,7 @@
+(defun test-callback (data interface)
+  (display-message "Data ~S in interface ~S" 
+                   data interface))
+                   
+(defun hello (data interface)
+  (declare (ignore data interface)) 
+  (display-message "Hello World"))
