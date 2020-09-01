@@ -1,0 +1,7 @@
+(setq push-button-panel
+      (make-instance 'push-button-panel
+                     :items '(one two three four five)
+                     :selection-callback 'test-callback
+                     :print-function 'string-capitalize))
+ 
+(contain push-button-panel)
